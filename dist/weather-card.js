@@ -212,7 +212,7 @@ class WeatherCard extends LitElement {
           <ha-icon icon="mdi:weather-windy"></ha-icon> ${windDirections[
             parseInt((stateObj.attributes.wind_bearing + 11.25) / 22.5)
           ]}
-          ${stateObj.attributes.wind_speed / 3.6}<span class="unit">
+          ${parseInt(stateObj.attributes.wind_speed / 3.6)}<span class="unit">
             m/s
           </span>
         </li>
