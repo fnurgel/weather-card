@@ -30,23 +30,23 @@ const weatherIconsNight = {
 };
 
 const windDirections = [
-  "N",
-  "NNE",
-  "NE",
-  "ENE",
-  "E",
-  "ESE",
-  "SE",
-  "SSE",
-  "S",
-  "SSW",
-  "SW",
-  "WSW",
-  "W",
-  "WNW",
-  "NW",
-  "NNW",
-  "N",
+  "n",
+  "nnö",
+  "nö",
+  "önö",
+  "ö",
+  "ösö",
+  "sö",
+  "ssö",
+  "s",
+  "ssv",
+  "sv",
+  "vsv",
+  "v",
+  "vnv",
+  "nv",
+  "nnv",
+  "n",
 ];
 
 window.customCards = window.customCards || [];
@@ -212,8 +212,8 @@ class WeatherCard extends LitElement {
           <ha-icon icon="mdi:weather-windy"></ha-icon> ${windDirections[
             parseInt((stateObj.attributes.wind_bearing + 11.25) / 22.5)
           ]}
-          ${stateObj.attributes.wind_speed}<span class="unit">
-            ${this.getUnit("length")}/h
+          ${stateObj.attributes.wind_speed / 3.6}<span class="unit">
+            m/s
           </span>
         </li>
         <li>
